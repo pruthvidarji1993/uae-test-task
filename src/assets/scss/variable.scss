@@ -1,0 +1,59 @@
+$primary: #fff;
+$dark_primary: #283046;
+$light_secondary: #7367f0;
+$danger: #ff0000;
+$black: #000000;
+$white: #ffffff;
+$color_dd: #dddddd;
+$color_99: #999999;
+$color_f8: #f8f8f8;
+$gloabal_width: 1920px;
+
+// mediaSizes
+$mediaSizes: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1500px,
+);
+.container {
+  @media (min-width: map-get($mediaSizes, 'xxl')) {
+    max-width: $gloabal_width !important;
+  }
+}
+@mixin box_shadow_com {
+  box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.2);
+}
+@mixin trans3 {
+  transition: 0.3s ease-in-out;
+}
+@mixin all_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cu-xl {
+  min-width: 200px;
+}
+.btn-cu-lg {
+  min-width: 150px;
+}
+.btn-cu-sm {
+  min-width: 100px;
+}
+.pointer {
+  cursor: pointer;
+}
+@mixin all_centers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner{
+  height: 5rem;
+  width: 5rem;
+}

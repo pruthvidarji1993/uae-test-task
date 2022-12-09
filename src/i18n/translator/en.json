@@ -1,0 +1,29 @@
+{
+  "header": {
+    "language":{
+      "english":"English",
+      "arabic":"Arabic"
+    }
+  },
+  "error": {
+    "heading": "404"
+  },
+  "login":{
+    "headTitle":"Test App | Login",
+    "cardTitleLogin":"Login",
+    "emailLabel":"Email",
+    "emailPlaceholder":"Enter your email",
+    "passwordLabel":"Password",
+    "passwordPlaceholder":"Enter your password",
+    "submitButton":"Login"
+  },
+  "Validation": {
+    "EmailRequired": "Email is required",
+    "ValidEmail": "Please enter a valid email",
+    "PasswordRequired": "Password is required",
+    "SpaceNotAllowed": "Space is not allowed",
+    "Min8Characters": "Minimum 8 characters required",
+    "Max15Character": "Maximum 15 characters allowed",
+    "PasswordValidation": "Password must contain at least one uppercase, one lowercase, one number and one special character"
+  }
+}

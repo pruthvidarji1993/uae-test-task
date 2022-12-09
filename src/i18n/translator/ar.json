@@ -1,0 +1,29 @@
+{
+    "header": {
+        "language": {
+            "english": "إنجليزي",
+            "arabic": "عربي"
+        }
+    },
+    "error": {
+        "heading": "404"
+    },
+    "login": {
+        "headTitle": "اختبار التطبيق | تسجيل الدخول",
+        "cardTitleLogin": "تسجيل الدخول",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "أدخل بريدك الإلكتروني",
+        "passwordLabel": "كلمة المرور",
+        "passwordPlaceholder": "ادخل رقمك السري",
+        "submitButton": "تسجيل الدخول"
+    },
+    "Validation": {
+        "EmailRequired": "البريد الالكتروني مطلوب",
+        "ValidEmail": "يرجى إدخال البريد الإلكتروني الصحيح",
+        "PasswordRequired": "كلمة المرور مطلوبة",
+        "SpaceNotAllowed": "الفضاء غير مسموح به",
+        "Min8Characters": "الحد الأدنى المطلوب 8 أحرف",
+        "Max15Character": "الحد الأقصى المسموح به هو 15 حرفًا",
+        "PasswordValidation": "يجب أن تحتوي كلمة المرور على الأقل على حرف كبير واحد وحرف صغير ورقم واحد وحرف خاص واحد"
+    }
+}
