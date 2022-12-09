@@ -1,29 +1,12 @@
-@import './variable.scss';
-// headeing css
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $dark_primary;
+@import "./variable.scss";
+
+.spinner{
+  height: 5rem;
+  width: 5rem;
 }
-iframe {
-  display: none;
-}
-.link-text {
-  color: $dark_primary;
-  text-decoration: none;
-  @include trans3();
-  &:hover {
-    color: $dark_primary;
-  }
-}
-.title {
-  span {
-    font-style: italic;
-    color: $light_secondary;
-  }
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 // Button css
 .btn {
@@ -32,17 +15,26 @@ iframe {
   padding-right: 20px !important;
   font-size: 16px;
   line-height: 20px;
+  @media (max-width: map-get($mediaSizes, "md")) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &.disabled {
+    cursor: not-allowed !important;
+    pointer-events: unset !important;
+  }
   &:focus {
     outline: none !important;
     box-shadow: none !important;
   }
   &.btn-primary {
-    background-color: $white;
-    background: $white;
+    background-color: $light_secondary;
+    background: $light_secondary;
     border: 1px solid $light_secondary;
-    color: $light_secondary;
+    color: $white;
+    min-height: 60px;
     font-weight: 600;
-    border-radius: 10px;
+    border-radius: 15px;
     &:hover,
     &:focus {
       background-color: $light_secondary;
@@ -50,48 +42,76 @@ iframe {
       color: $primary;
     }
   }
+  &.btn-outline-primary {
+    background-color: transparent;
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    min-height: 40px;
+    font-weight: 600;
+    border-radius: 15px;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border: 1px solid $light_secondary;
+      color: $light_secondary !important;
+    }
+  }
 }
 // form-group
 .form-group {
+  &.mb20 {
+    margin-bottom: 25px;
+  }
   label {
-    color: $dark_primary;
+    color: $white;
     span.required {
       color: $danger;
     }
   }
   .input-group {
     .input-group-text {
-      border-color: $dark_primary;
-      background: $white;
-      color: $dark_primary;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+      border-color: $borderColor;
+      background: transparent;
+      color: $white;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
   }
+  // autofill
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px $primaryBlack inset !important;
+    -webkit-text-fill-color: $white !important;
+  }
   .form-control {
-    border-color: $dark_primary;
-    min-height: 45px;
-    border-radius: 10px;
-    font-size: 14px;
+    border-color: $borderColor;
+    min-height: 60px;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 16px;
+    color: $white !important;
     &::-webkit-input-placeholder {
-      color: $color_99;
+      color: $borderColor;
     }
     &::-moz-placeholder {
-      color: $color_99;
+      color: $borderColor;
     }
     &:-ms-input-placeholder {
-      color: $color_99;
+      color: $borderColor;
     }
     &:-moz-placeholder {
-      color: $color_99;
+      color: $borderColor;
     }
     &:focus {
       outline: none;
       box-shadow: none;
-      border-color: $black;
+      border-color: $borderColor;
     }
     &:focus + .input-group-text {
-      border-color: $black;
+      border-color: $borderColor;
     }
   }
 }
@@ -99,54 +119,32 @@ iframe {
 .loader {
   height: 100vh;
   width: 100%;
-  background: rgba($dark_primary, 0.5);
+  background: rgba($primaryBlack, 0.5);
 }
 .theme-section {
-  background-color: $color_f8 !important;
-}
-// shadow-div css
-h2 {
-  font-size: 20px;
-  line-height: 25px;
-  color: $black;
-  margin-bottom: 0;
-  font-weight: 500;
-}
-.shadow-div {
-  max-height: 80px;
-  min-height: 80px;
-  padding: 5px 0;
-  background: $primary;
-  @include all_centers();
+  background-color: $primaryBlack;
+  background: url("../images/bg-after.png") repeat $primaryBlack;
+  background-size: cover;
 }
 // mid-section
 .mid-section {
   width: 100%;
-  min-height: calc(100vh - 160px);
-  background-color: $white;
-  padding: 20px 0;
-  border: 1px solid $black;
+  min-height: calc(100vh - 100px);
+  padding: 0 0 20px;
   border-left: 0;
   border-right: 0;
-  @include box_shadow_com();
-  .card.main-div {
-    max-width: 500px;
-    margin: 0 auto 40px;
-    &.mb-0 {
-      margin-bottom: 0;
-    }
-  }
   &.full {
     min-height: 100vh;
     margin: 0;
+    padding: 0;
+    background-color: $primaryBlack;
+    background: url("../images/bg-after.png") repeat $primaryBlack;
+    background-size: cover;
   }
   .full-height {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
-    @include all_centers();
-    @media (max-width: map-get($mediaSizes, 'md')) {
-      min-height: calc(100vh - 160px);
-    }
+    @include all_center();
   }
 }
 .error-msg {
@@ -156,100 +154,259 @@ h2 {
   font-size: 12px;
   line-height: 15px;
 }
+
 // card highlight
 .card {
   &.highlight-card {
-    border-color: $dark_primary;
-    border-radius: 15px;
-    overflow: hidden;
-    @include box_shadow_com();
+    background-color: transparent !important;
+    border: 0;
+    color: $white;
+    @media (max-width: map-get($mediaSizes, "lg")) {
+      margin-top: 25px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .card-header {
-      background-color: $white;
-      padding: 15px 20px;
-      border-color: $dark_primary;
-      color: $dark_primary;
-    }
-    .card-body {
-      padding: 20px 20px;
-    }
-  }
-}
-
-// Language Picker CSS
-.dropdown-language {
-  .nav-link {
-    padding: 5px !important;
-    height: 40px;
-    border: 1px solid $primary;
-    border-radius: 20px;
-    @include all_center();
-    .country-flag-data {
-      width: 30px !important;
-      height: 30px !important;
-      overflow: hidden;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 5px;
-      img {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.5);
-      }
-    }
-    .selected-language {
-      color: $black;
-      font-weight: 600;
-      padding-right: 2px;
-      min-width: 20px;
-    }
-  }
-  .dropdown-menu.with-lang {
-    padding: 15px 10px;
-    min-width: 160px;
-    border-radius: 20px;
-    border: 0 !important;
-    box-shadow: 0px 5px 10px rgba($black, 0.2);
-    transform: unset !important;
-    top: 110% !important;
-    right: 0 !important;
-    left: unset !important;
-    .dropdown-item {
-      padding: 8px 10px;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      &:focus,
-      &:hover,
-      &:active {
-        background-color: transparent !important;
-        span {
-          color: $black
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      .card-title {
+        font-size: 64px;
+        line-height: 80px;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 30px !important;
+        @media (max-width: map-get($mediaSizes, "lg")) {
+          font-size: 45px;
+          line-height: 60px;
+        }
+        @media (max-width: map-get($mediaSizes, "sm")) {
+          font-size: 35px;
+          line-height: 40px;
         }
       }
-      img {
-        margin-right: 5px;
-        width: 25px !important;
-        height: 17px !important;
-      }
-      span {
-        color: $black;
-        font-weight: 600;
-      }
+    }
+    .card-body {
+      padding: 0 !important;
     }
   }
 }
 
-header{
-  .header-ul{
+
+header {
+  padding: 0;
+  .inner-header {
+    min-height: 100px;
+    align-items: center;
+    h4 {
+      color: $white;
+      font-size: 40px;
+      line-height: 50px;
+      font-weight: 600;
+      @media (max-width: map-get($mediaSizes, "md")) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+  .header-ul {
     padding: 0;
     margin: 0 0 0 auto;
     width: fit-content;
-    li{
+    li {
       display: inline-block;
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  // Language Picker CSS
+  .dropdown-language {
+    .nav-link {
+      padding: 5px !important;
+      height: 45px;
+      border: 1px solid $white;
+      border-radius: 15px;
+      @include all_center();
+      .country-flag-data {
+        width: 30px !important;
+        height: 30px !important;
+        overflow: hidden;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+        img {
+          width: 100%;
+          height: 100%;
+          transform: scale(1.5);
+        }
+      }
+      .selected-language {
+        color: $white;
+        font-weight: 600;
+        padding-right: 2px;
+        min-width: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        @media (max-width: map-get($mediaSizes, "md")) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+    .dropdown-menu.with-lang {
+      padding: 15px 10px;
+      min-width: 160px;
+      border-radius: 20px;
+      border: 0 !important;
+      box-shadow: 0px 5px 10px rgba($black, 0.2);
+      transform: unset !important;
+      top: 110% !important;
+      right: 0 !important;
+      left: unset !important;
+      .dropdown-item {
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        &:focus,
+        &:hover,
+        &:active {
+          background-color: transparent !important;
+          span {
+            color: $black;
+          }
+        }
+        img {
+          margin-right: 5px;
+          width: 25px !important;
+          height: 17px !important;
+        }
+        span {
+          color: $black;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          @media (max-width: map-get($mediaSizes, "md")) {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.title{
+  font-size: 60px;
+  line-height: 70px;
+  color: $white;
+  @media (max-width: map-get($mediaSizes, "md")) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+.breadcrumb-data {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h4 {
+    font-size: 45px;
+    line-height: 55px;
+    color: $white;
+    @media (max-width: map-get($mediaSizes, "md")) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+.blog-card {
+  padding: 8px 8px 0 8px;
+  border-radius: 12px;
+  background-color: rgba($cardBg, 0.8);
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    border-radius: 12px;
+    min-height: 500px;
+    background-color: rgba($white, 0.2);
+  }
+  .card-body {
+    padding: 24px 8px;
+    .card-title {
+      color: $white;
+      font-size: 16px;
+      line-height: 150%;
     }
   }
 }
 
-.mw-800{
+.mw-800 {
   max-width: 1000px;
+}
+.scroll-top-btn{
+  width: 40px;
+  min-height: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  @include all_center();
+  padding: 0  !important;
+  @include box_shadow_com();
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+// RTL CSS
+[dir="rtl"] {
+  .form-group {
+    &.mb20 {
+      margin-bottom: 25px;
+    }
+    label {
+      color: $white;
+      span.required {
+        color: $danger;
+      }
+    }
+    .input-group {
+      .input-group-text {
+        border-radius: 10px 0 0 10px !important;
+      }
+      .form-control {
+        border-radius: 0 10px 10px 0 !important;
+        border-left: 0 !important;
+      }
+    }
+  }
+  header {
+    .header-ul {
+      margin: 0 auto 0 0;
+      li {
+        margin-right: 0;
+        margin-left: 15px;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .dropdown-language {
+      .nav-link {
+        .country-flag-data {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .scroll-top-btn{
+    left: 20px;
+    right: unset !important;
+  }
 }

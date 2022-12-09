@@ -1,75 +1,68 @@
-# test-app
+## Sample React Structure 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+One of the best features of the framework is how it lets you make most of the decisions around tooling, build tools and folder structures, and you should embrace that. I hope this structure will give you more flexiblity in terms of coding & help you to build larger React applications with proper format.
 
-## Available Scripts
+This is the basic structure that will help you at the time of initial development of any project.
 
-In the project directory, you can run:
+## Structure Overview
+* /src/assets folder contains fonts, css (global) , images (static images)
+* /src/api folder contains API calling handing with various switch case wise
+* /src/components folder contains re-usable components
+* /src/configs folder contains configuration related Project specific , third party related configuration, environment specific configuration etc...
+* /src/constants folder contains API endpoint constants, messages or any static text
+* /src/redux folder contains State management information and how data passing and storing in state object
+* /src/routes folder contains splitting routing with public and private (those we have to access with OR without authenticaiton)
+* /src/views folder contains module specific folders and in that those module specific files (.JS & .CSS)
+* /src/utils folder contains utility files (independent files) 
+* eslintrc.js (Code Standards rules)
+* .env (Secure Configured details) 
 
-### `npm start`
+## Prerequisites 
+* React 16.14+
+* NODE
+* axios
+* React Redux ^7.2.2 / Recoil / Redux toolkit / redux-saga / Zustand / redux-persist
+* react-toastify (Toaster Notification)
+* react-data-table-component (datatable)
+* react-hook-form / Formik / simple-react-validator
+* react-router-dom
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
+#### 1. Clone this project or Download that ZIP file
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```sh
+$ git clone https://bitbucket.org/pruthvidarji3110/sample-structure.git
+```
 
-### `npm test`
+#### 2. Make sure you have [npm](https://www.npmjs.org/) installed globally
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+More details [here](https://nodejs.org/en/download/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
+#### 3. On the command prompt run the following commands
+
+```sh
+$ cd `project-directory`
+```
+```sh
+$ npm install
+```
+
+### `npm start` or `yarn start`
+
+Runs the app in development mode.
+Open [http://localhost:3000/](http://localhost:3000/) to view it in the browser.
+
+
+By default, for build generate and deploy on server then.
+
+### `npm run build` or `yarn build`
+
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.
+By default, it also [includes a service worker](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app) so that your app loads from local cache on future visits.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## Environment Variables (.env)
-
-`REACT_APP_BASENAME` - Specify the basename of project to run on specified base name
-
+## Developed By
+Pruthvi Darji **pruthvid@zignuts.com**

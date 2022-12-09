@@ -1,15 +1,22 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import MoviesList from '../../component/movies/MoviesList';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import MoviesList from "../../component/movies/MoviesList";
 
 function Dashboard() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Helmet>
-        <title>Popular Movies | Test App</title>
+        <title>{t('home.title')}</title>
       </Helmet>
-      <section className='mid-section'>
-        <h4 className='mb-0 text-center'>Popular Movies</h4>
+      <section className="mid-section">
+        <div className="breadcrumb-data">
+          <div className="container">
+            <h4 className="mb-0 text-left">{t('home.popularMovieTitle')}</h4>
+          </div>
+        </div>
         <MoviesList />
       </section>
     </>

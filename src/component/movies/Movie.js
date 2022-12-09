@@ -1,13 +1,15 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { Card, CardBody, CardTitle, Col } from 'reactstrap'
 import { GlobalVariable } from '../../constants/globleVariable'
 
 export default function Movie({ movie}) {
     return (
-        <Col md={6} sm={12} className="my-3">
-            <Card className='w-100'>
-                <img
+        <Col md={6} sm={12}>
+            <Card className='blog-card'>
+                <LazyLoadImage
                     alt="Card"
+                    className="img-fluid"
                     src={`${GlobalVariable.imageUrl}${movie.poster_path}`}
                 />
                 <CardBody>

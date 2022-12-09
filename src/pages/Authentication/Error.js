@@ -8,11 +8,11 @@ function Dashboard() {
   return (
     <>
       <Helmet>
-        <title>BoilerPlate - Error</title>
+        <title>{t('error.title')}</title>
       </Helmet>
       <Container fluid='lg'>
         <div className='text-center'>
-          <h3 className='mb-0 title'>Page {t('error.heading')}</h3>
+          <h3 className='mb-0 title'>{t('error.heading')}</h3>
         </div>
       </Container>
     </>

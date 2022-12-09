@@ -1,5 +1,6 @@
 // Toaster
 import { toast } from 'react-toastify';
+import i18n from '../../../i18n/i18n';
 
 // Action Types
 import {
@@ -8,7 +9,10 @@ import {
 } from '../types';
 
 
-//Login Action
+/**
+ * @name login
+ * @description this funcion will take user information and store then in redux state and move page to home page
+ */
 export const login = (user, navigate) => {
   return async (dispatch) => {
 
@@ -34,11 +38,14 @@ export const login = (user, navigate) => {
 
     //push home page in history to move user to home page
     navigate('/');
-    toast.success('Logged in successfully');
+    toast.success(i18n.t('Messages.loggedInSuccess'));
   };
 };
 
-//Logout Action
+/**
+ * @name handleLogout
+ * @description this funcion will clear user state from redux and move user back to login page
+ */
 export const handleLogout = (navigate) => {
   return (dispatch) => {
     //dispatch a action to clear user data in redux store
@@ -51,7 +58,7 @@ export const handleLogout = (navigate) => {
       type: SET_IS_AUTHENTICATED,
       payload: false,
     });
-    toast.success('Logged out successfully');
+    toast.success(i18n.t('Messages.loggedoutSuccess'));
     navigate('/login');
   };
 };

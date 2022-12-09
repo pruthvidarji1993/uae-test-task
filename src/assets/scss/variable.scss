@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 $primary: #fff;
 $dark_primary: #283046;
-$light_secondary: #7367f0;
+$light_secondary: #7B6EF6;
 $danger: #ff0000;
 $black: #000000;
 $white: #ffffff;
 $color_dd: #dddddd;
 $color_99: #999999;
 $color_f8: #f8f8f8;
-$gloabal_width: 1920px;
+$gloabal_width: 1520px;
+$borderColor:#323B54;
+$primaryBlack:#121829;
+$cardBg:#20283E;
 
 // mediaSizes
 $mediaSizes: (
@@ -19,9 +24,7 @@ $mediaSizes: (
   'xxl': 1500px,
 );
 .container {
-  @media (min-width: map-get($mediaSizes, 'xxl')) {
-    max-width: $gloabal_width !important;
-  }
+  max-width: $gloabal_width !important;
 }
 @mixin box_shadow_com {
   box-shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.2);
@@ -34,26 +37,12 @@ $mediaSizes: (
   align-items: center;
   justify-content: center;
 }
-
-.btn-cu-xl {
-  min-width: 200px;
+iframe {
+  display: none;
 }
 .btn-cu-lg {
   min-width: 150px;
 }
-.btn-cu-sm {
-  min-width: 100px;
-}
 .pointer {
   cursor: pointer;
-}
-@mixin all_centers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.spinner{
-  height: 5rem;
-  width: 5rem;
 }

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 //Toaster
 import { toast } from 'react-toastify';
+import i18n from '../i18n/i18n';
 
 
 export const api = async (url, data, type) => {
@@ -61,11 +62,11 @@ export const api = async (url, data, type) => {
       err?.response?.status === 500
     ) {
       if (err.response.status === 401 || err.response.status === 403) {
-        toast.error('Session expired');
+        toast.error(i18n.t('Messages.unAuthorized'));
       } else if (err.response.status === 500) {
-        toast.error('Internal server error');
+        toast.error(i18n.t('Messages.internalError'));
       } else {
-        toast.error('Service unavailable');
+        toast.error(i18n.t('Messages.serviceUnavailable'));
       }
       return false;
     } else {
