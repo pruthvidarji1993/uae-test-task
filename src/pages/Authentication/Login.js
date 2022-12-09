@@ -73,7 +73,7 @@ const Login = () => {
                   validationSchema={loginSchema}
                   onSubmit={handleSubmit}
                 >
-                  {({ errors, touched }) => (
+                  {({ errors, touched, values }) => (
                     <Form>
                       <div className='form-group mb20'>
                         <Label for='username'>
@@ -142,7 +142,7 @@ const Login = () => {
                         className='btn-cu-lg'
                         color='primary'
                         block
-                        disabled={errors.password || errors.email}
+                        disabled={!values.email || !values.password || errors.password || errors.email}
                       >
                         {t('login.submitButton')}
                       </Button>
