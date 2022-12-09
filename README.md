@@ -1,8 +1,6 @@
-## Sample React Structure
+## UAE Test Demo
 
-One of the best features of the framework is how it lets you make most of the decisions around tooling, build tools and folder structures, and you should embrace that. I hope this structure will give you more flexiblity in terms of coding & help you to build larger React applications with proper format.
-
-This is the basic structure that will help you at the time of initial development of any project.
+Test Demo Created according requirement shared by Client 
 
 ## Structure Overview
 
