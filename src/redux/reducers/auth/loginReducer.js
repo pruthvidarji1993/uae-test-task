@@ -1,12 +1,9 @@
-import {
-  SET_USER,
-  SET_IS_AUTHENTICATED
-} from '../../actions/types';
+import { SET_USER, SET_IS_AUTHENTICATED } from '../../actions/types';
 
 const initalState = {
   user: null,
   isAuthenticated: false,
-}
+};
 
 export const login = (state = initalState, action) => {
   switch (action.type) {

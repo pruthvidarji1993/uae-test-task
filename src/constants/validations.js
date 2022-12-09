@@ -7,15 +7,15 @@ const t = i18n.t;
  * @description validation schema for login page
  */
 export const loginSchema = Yup.object().shape({
-    email: Yup.string()
-        .email(t("Validation.ValidEmail"))
-        .required(t("Validation.EmailRequired")),
-    password: Yup.string()
-        .required(t("Validation.PasswordRequired"))
-        .min(8, t("Validation.Min8Characters"))
-        .max(15, t("Validation.Max15Character"))
-        .matches(
-            /(?=^.{8,}$)(?=.*\d)(?=.*[~()_+='":;?/|.><,`}{!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-            t("Validation.PasswordValidation")
-        ),
+  email: Yup.string()
+    .email(t('Validation.ValidEmail'))
+    .required(t('Validation.EmailRequired')),
+  password: Yup.string()
+    .required(t('Validation.PasswordRequired'))
+    .min(8, t('Validation.Min8Characters'))
+    .max(15, t('Validation.Max15Character'))
+    .matches(
+      /(?=^.{8,}$)(?=.*\d)(?=.*[~()_+='":;?/|.><,`}{!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
+      t('Validation.PasswordValidation')
+    ),
 });

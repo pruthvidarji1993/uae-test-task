@@ -1,32 +1,32 @@
-import React from "react";
+import React from 'react';
 
 //react-dom
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 //CSS
-import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //i18n
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n/i18n";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n/i18n';
 
 //history
-import { history } from "./history";
+import { history } from './history';
 
 // ** Redux Imports
-import { Provider } from "react-redux";
-import { store, persistor } from "./redux/storeConfig/store";
-import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from 'react-redux';
+import { store, persistor } from './redux/storeConfig/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 //react toastify
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //Component
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -40,15 +40,15 @@ ReactDOM.render(
             <App />
             <ToastContainer
               newestOnTop
-              rtl={i18n.language === "ar"}
-              position={i18n.language === "ar" ? "top-left" : "top-right"}
+              rtl={i18n.language === 'ar'}
+              position={i18n.language === 'ar' ? 'top-left' : 'top-right'}
             />
           </PersistGate>
         </BrowserRouter>
       </I18nextProvider>
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

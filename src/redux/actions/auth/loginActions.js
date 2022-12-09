@@ -1,13 +1,10 @@
 //imports
 import { toast } from 'react-toastify';
+import { encyptData } from '../../../constants/utils';
 import i18n from '../../../i18n/i18n';
 
 // Action Types
-import {
-  SET_USER,
-  SET_IS_AUTHENTICATED
-} from '../types';
-
+import { SET_USER, SET_IS_AUTHENTICATED } from '../types';
 
 /**
  * @name login
@@ -15,16 +12,16 @@ import {
  */
 export const login = (user, navigate) => {
   return async (dispatch) => {
-
     //destructuring of the user object to get require data
     let { email, password } = user;
 
     //encrypting the password
+    password = encyptData(password);
 
     let userData = {
       email,
       password,
-    }
+    };
     //dispatch a action to store user data in redux store
     dispatch({
       type: SET_USER,

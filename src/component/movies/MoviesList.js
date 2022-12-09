@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Button, Col, Row, Spinner } from "reactstrap";
-import { useTranslation } from "react-i18next";
+import React, { useEffect, useState } from 'react';
+import { Button, Col, Row, Spinner } from 'reactstrap';
+import { useTranslation } from 'react-i18next';
 
-import { api } from "../../api/api";
-import { GlobalVariable } from "../../constants/globleVariable";
-import Movie from "./Movie";
+import { api } from '../../api/api';
+import { GlobalVariable } from '../../constants/globleVariable';
+import Movie from './Movie';
 
 export default function MoviesList() {
   const { i18n, t } = useTranslation();
@@ -16,8 +16,8 @@ export default function MoviesList() {
 
   // this useEffect is run on first render and every langauge change
   useEffect(() => {
-      setIsFirstLoading(true);
-      getMovies(1, false);
+    setIsFirstLoading(true);
+    getMovies(1, false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
@@ -27,7 +27,7 @@ export default function MoviesList() {
    */
   const getMovies = async (page, concat = true) => {
     let url = `${GlobalVariable.movieDBUrl}${GlobalVariable.poularMoviesAPIEndpoint}?api_key=${process.env.REACT_APP_MOVIEDB_API_KEY}&page=${page}&language=${i18n.language}`;
-    let response = await api(url, {}, "get");
+    let response = await api(url, {}, 'get');
     if (response && response?.status === 200) {
       if (concat) {
         setMovies([...movies, ...response?.data?.results]);
@@ -50,28 +50,23 @@ export default function MoviesList() {
   };
 
   return (
-    <Row className="m-auto mw-800 justify-content-center">
+    <Row className='m-auto mw-800 justify-content-center'>
       {isFirstLoading ? (
-        <Spinner className="spinner" color="light" />
+        <Spinner className='spinner' color='light' />
       ) : (
         <>
           {movies.map((movie) => {
-            return (
-              <Movie
-                movie={movie}
-                key={movie.id}
-              />
-            );
+            return <Movie movie={movie} key={movie.id} />;
           })}
-          <Col sm={12} className="d-flex justify-content-center">
+          <Col sm={12} className='d-flex justify-content-center'>
             <Button
-              type="button"
-              className="btn-cu-lg w-50"
-              color="primary"
+              type='button'
+              className='btn-cu-lg w-50'
+              color='primary'
               onClick={nextPage}
               disabled={isLoading}
             >
-              {isLoading ? <Spinner size={"sm"} /> : t('home.buttonLoadMore')}
+              {isLoading ? <Spinner size={'sm'} /> : t('home.buttonLoadMore')}
             </Button>
           </Col>
         </>

@@ -12,6 +12,6 @@ const App = () => {
       </HelmetProvider>
     </div>
   );
-};  
+};
 
 export default App;

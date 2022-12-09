@@ -1,12 +1,12 @@
-@import "./variable.scss";
+@import './variable.scss';
 
-.spinner{
+.spinner {
   height: 5rem;
   width: 5rem;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 // Button css
 .btn {
@@ -15,7 +15,7 @@ body {
   padding-right: 20px !important;
   font-size: 16px;
   line-height: 20px;
-  @media (max-width: map-get($mediaSizes, "md")) {
+  @media (max-width: map-get($mediaSizes, 'md')) {
     font-size: 14px;
     line-height: 16px;
   }
@@ -120,14 +120,14 @@ body {
   height: 100vh;
   width: 100%;
   background-color: $primaryBlack;
-  background: url("../images/bg-after.png") repeat $primaryBlack;
+  background: url('../images/bg-after.png') repeat $primaryBlack;
   background-size: cover;
   @include all_center();
   text-align: center;
 }
 .theme-section {
   background-color: $primaryBlack;
-  background: url("../images/bg-after.png") repeat $primaryBlack;
+  background: url('../images/bg-after.png') repeat $primaryBlack;
   background-size: cover;
 }
 // mid-section
@@ -142,7 +142,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: $primaryBlack;
-    background: url("../images/bg-after.png") repeat $primaryBlack;
+    background: url('../images/bg-after.png') repeat $primaryBlack;
     background-size: cover;
   }
   .full-height {
@@ -165,7 +165,7 @@ body {
     background-color: transparent !important;
     border: 0;
     color: $white;
-    @media (max-width: map-get($mediaSizes, "lg")) {
+    @media (max-width: map-get($mediaSizes, 'lg')) {
       margin-top: 25px;
       max-width: 500px;
       margin-left: auto;
@@ -181,11 +181,11 @@ body {
         color: $white;
         font-weight: 600;
         margin-bottom: 30px !important;
-        @media (max-width: map-get($mediaSizes, "lg")) {
+        @media (max-width: map-get($mediaSizes, 'lg')) {
           font-size: 45px;
           line-height: 60px;
         }
-        @media (max-width: map-get($mediaSizes, "sm")) {
+        @media (max-width: map-get($mediaSizes, 'sm')) {
           font-size: 35px;
           line-height: 40px;
         }
@@ -197,7 +197,6 @@ body {
   }
 }
 
-
 header {
   padding: 0;
   .inner-header {
@@ -208,7 +207,7 @@ header {
       font-size: 40px;
       line-height: 50px;
       font-weight: 600;
-      @media (max-width: map-get($mediaSizes, "md")) {
+      @media (max-width: map-get($mediaSizes, 'md')) {
         font-size: 30px;
         line-height: 40px;
       }
@@ -254,7 +253,7 @@ header {
         min-width: 20px;
         font-size: 16px;
         line-height: 20px;
-        @media (max-width: map-get($mediaSizes, "md")) {
+        @media (max-width: map-get($mediaSizes, 'md')) {
           font-size: 14px;
           line-height: 16px;
         }
@@ -293,7 +292,7 @@ header {
           font-weight: 600;
           font-size: 16px;
           line-height: 20px;
-          @media (max-width: map-get($mediaSizes, "md")) {
+          @media (max-width: map-get($mediaSizes, 'md')) {
             font-size: 14px;
             line-height: 16px;
           }
@@ -302,11 +301,11 @@ header {
     }
   }
 }
-.title{
+.title {
   font-size: 60px;
   line-height: 70px;
   color: $white;
-  @media (max-width: map-get($mediaSizes, "md")) {
+  @media (max-width: map-get($mediaSizes, 'md')) {
     font-size: 40px;
     line-height: 40px;
   }
@@ -321,7 +320,7 @@ header {
     font-size: 45px;
     line-height: 55px;
     color: $white;
-    @media (max-width: map-get($mediaSizes, "md")) {
+    @media (max-width: map-get($mediaSizes, 'md')) {
       font-size: 30px;
       line-height: 40px;
     }
@@ -353,23 +352,23 @@ header {
 .mw-800 {
   max-width: 1000px;
 }
-.scroll-top-btn{
+.scroll-top-btn {
   width: 40px;
   min-height: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
   @include all_center();
-  padding: 0  !important;
+  padding: 0 !important;
   @include box_shadow_com();
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: rgba($cardBg, 0.8) !important;
-  border-color:$cardBg !important;
+  border-color: $cardBg !important;
 }
 
 // RTL CSS
-[dir="rtl"] {
+[dir='rtl'] {
   .form-group {
     &.mb20 {
       margin-bottom: 25px;
@@ -411,7 +410,7 @@ header {
     }
   }
 
-  .scroll-top-btn{
+  .scroll-top-btn {
     left: 20px;
     right: unset !important;
   }

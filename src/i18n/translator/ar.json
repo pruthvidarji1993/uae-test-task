@@ -1,44 +1,44 @@
 {
-    "header": {
-        "language": {
-            "english": "إنجليزي",
-            "arabic": "عربي"
-        },
-        "appTitle": "اختبار التطبيق",
-        "buttonLogout": "تسجيل خروج"
+  "header": {
+    "language": {
+      "english": "إنجليزي",
+      "arabic": "عربي"
     },
-    "Validation": {
-        "EmailRequired": "البريد الالكتروني مطلوب",
-        "ValidEmail": "يرجى إدخال البريد الإلكتروني الصحيح",
-        "PasswordRequired": "كلمة المرور مطلوبة",
-        "SpaceNotAllowed": "الفضاء غير مسموح به",
-        "Min8Characters": "الحد الأدنى المطلوب 8 أحرف",
-        "Max15Character": "الحد الأقصى المسموح به هو 15 حرفًا",
-        "PasswordValidation": "يجب أن تحتوي كلمة المرور على الأقل على حرف كبير واحد وحرف صغير ورقم واحد وحرف خاص واحد"
-    },
-    "Messages": {
-        "loggedInSuccess": "تم تسجيل الدخول بنجاح",
-        "loggedoutSuccess": "تم تسجيل الخروج بنجاح",
-        "unAuthorized":"غير مصرح",
-        "internalError":"خطأ في الخادم الداخلي",
-        "serviceUnavailable":"الخدمة غير متوفرة"
-    },
-    "error": {
-        "title": "غير موجود | اختبار التطبيق",
-        "heading": "404 غير موجود"
-    },
-    "login": {
-        "headTitle": "تسجيل الدخول | اختبار التطبيق",
-        "cardTitleLogin": "تسجيل الدخول",
-        "emailLabel": "البريد الإلكتروني",
-        "emailPlaceholder": "أدخل بريدك الإلكتروني",
-        "passwordLabel": "كلمة المرور",
-        "passwordPlaceholder": "ادخل رقمك السري",
-        "submitButton": "تسجيل الدخول"
-    },
-    "home": {
-        "title": "أفلام شعبية | اختبار التطبيق",
-        "popularMovieTitle": "أفلام شعبية",
-        "buttonLoadMore": "تحميل المزيد"
-    }
+    "appTitle": "اختبار التطبيق",
+    "buttonLogout": "تسجيل خروج"
+  },
+  "Validation": {
+    "EmailRequired": "البريد الالكتروني مطلوب",
+    "ValidEmail": "يرجى إدخال البريد الإلكتروني الصحيح",
+    "PasswordRequired": "كلمة المرور مطلوبة",
+    "SpaceNotAllowed": "الفضاء غير مسموح به",
+    "Min8Characters": "الحد الأدنى المطلوب 8 أحرف",
+    "Max15Character": "الحد الأقصى المسموح به هو 15 حرفًا",
+    "PasswordValidation": "يجب أن تحتوي كلمة المرور على الأقل على حرف كبير واحد وحرف صغير ورقم واحد وحرف خاص واحد"
+  },
+  "Messages": {
+    "loggedInSuccess": "تم تسجيل الدخول بنجاح",
+    "loggedoutSuccess": "تم تسجيل الخروج بنجاح",
+    "unAuthorized": "غير مصرح",
+    "internalError": "خطأ في الخادم الداخلي",
+    "serviceUnavailable": "الخدمة غير متوفرة"
+  },
+  "error": {
+    "title": "غير موجود | اختبار التطبيق",
+    "heading": "404 غير موجود"
+  },
+  "login": {
+    "headTitle": "تسجيل الدخول | اختبار التطبيق",
+    "cardTitleLogin": "تسجيل الدخول",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "ادخل رقمك السري",
+    "submitButton": "تسجيل الدخول"
+  },
+  "home": {
+    "title": "أفلام شعبية | اختبار التطبيق",
+    "popularMovieTitle": "أفلام شعبية",
+    "buttonLoadMore": "تحميل المزيد"
+  }
 }

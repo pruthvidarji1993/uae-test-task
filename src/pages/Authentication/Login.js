@@ -1,5 +1,5 @@
 //packages Imports
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Button,
   Card,
@@ -12,19 +12,19 @@ import {
   Label,
   Row,
   Col,
-} from "reactstrap";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
-import { Field, Form, Formik } from "formik";
-import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+} from 'reactstrap';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
+import { Field, Form, Formik } from 'formik';
+import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 //File Imports
-import { validateEmail } from "../../constants/validationFunctions";
-import { loginSchema } from "../../constants/validations";
-import { login } from "../../redux/actions/auth/loginActions";
-import Infographic from "../../assets/images/login-infographic.svg";
+import { validateEmail } from '../../constants/validationFunctions';
+import { loginSchema } from '../../constants/validations';
+import { login } from '../../redux/actions/auth/loginActions';
+import Infographic from '../../assets/images/login-infographic.svg';
 
 const Login = () => {
   const { t } = useTranslation();
@@ -52,99 +52,99 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>{t("login.headTitle")}</title>
+        <title>{t('login.headTitle')}</title>
       </Helmet>
       <Container>
-        <Row className="align-items-center justify-content-center">
+        <Row className='align-items-center justify-content-center'>
           <Col lg={5} md={5} sm={6} xs={8}>
-            <img src={Infographic} className="img-fluid" alt="images" />
+            <img src={Infographic} className='img-fluid' alt='images' />
           </Col>
           <Col lg={5} md={8}>
-            <Card className="main-div mb-0 highlight-card">
+            <Card className='main-div mb-0 highlight-card'>
               <CardHeader>
-                <CardTitle>{t("login.cardTitleLogin")}</CardTitle>
+                <CardTitle>{t('login.cardTitleLogin')}</CardTitle>
               </CardHeader>
               <CardBody>
                 <Formik
                   initialValues={{
-                    email: "",
-                    password: "",
+                    email: '',
+                    password: '',
                   }}
                   validationSchema={loginSchema}
                   onSubmit={handleSubmit}
                 >
                   {({ errors, touched }) => (
                     <Form>
-                      <div className="form-group mb20">
-                        <Label for="username">
-                          {t("login.emailLabel")}{" "}
-                          <span className="required">*</span>
+                      <div className='form-group mb20'>
+                        <Label for='username'>
+                          {t('login.emailLabel')}{' '}
+                          <span className='required'>*</span>
                         </Label>
                         <Field
-                          as="input"
-                          type="email"
-                          name="email"
-                          autoComplete="off"
+                          as='input'
+                          type='email'
+                          name='email'
+                          autoComplete='off'
                           validate={validateEmail}
-                          id="login-email"
-                          placeholder={t("login.emailPlaceholder")}
+                          id='login-email'
+                          placeholder={t('login.emailPlaceholder')}
                           className={`form-control form-group   ${
-                            errors.email && touched.email && "is-invalid"
+                            errors.email && touched.email && 'is-invalid'
                           }`}
                         />
                         {errors.email && touched.email ? (
-                          <span className="text-danger error-msg">
+                          <span className='text-danger error-msg'>
                             {errors?.email}
                           </span>
                         ) : null}
                       </div>
-                      <div className="form-group mb20">
-                        <Label for="password">
-                          {t("login.passwordLabel")}{" "}
-                          <span className="required">*</span>
+                      <div className='form-group mb20'>
+                        <Label for='password'>
+                          {t('login.passwordLabel')}{' '}
+                          <span className='required'>*</span>
                         </Label>
                         <InputGroup>
                           <Field
-                            as="input"
-                            name="password"
-                            type={visiblePassword ? "text" : "password"}
+                            as='input'
+                            name='password'
+                            type={visiblePassword ? 'text' : 'password'}
                             className={`form-control form-group  border-right-0' ${
                               errors.password &&
                               touched.password &&
-                              "is-invalid"
+                              'is-invalid'
                             }`}
-                            placeholder={t("login.passwordPlaceholder")}
+                            placeholder={t('login.passwordPlaceholder')}
                           />
                           <InputGroupText>
                             {visiblePassword ? (
                               <FaEye
-                                size="15"
-                                className="pointer"
+                                size='15'
+                                className='pointer'
                                 onClick={viewPassword}
                               />
                             ) : (
                               <FaEyeSlash
-                                size="15"
-                                className="pointer"
+                                size='15'
+                                className='pointer'
                                 onClick={viewPassword}
                               />
                             )}
                           </InputGroupText>
                         </InputGroup>
                         {errors.password && touched.password ? (
-                          <span className="text-danger error-msg">
+                          <span className='text-danger error-msg'>
                             {errors?.password}
                           </span>
                         ) : null}
                       </div>
                       <Button
-                        type="submit"
-                        className="btn-cu-lg"
-                        color="primary"
+                        type='submit'
+                        className='btn-cu-lg'
+                        color='primary'
                         block
                         disabled={errors.password || errors.email}
                       >
-                        {t("login.submitButton")}
+                        {t('login.submitButton')}
                       </Button>
                     </Form>
                   )}

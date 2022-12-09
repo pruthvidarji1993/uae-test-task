@@ -1,11 +1,11 @@
 {
   "header": {
-    "language":{
-      "english":"English",
-      "arabic":"Arabic"
+    "language": {
+      "english": "English",
+      "arabic": "Arabic"
     },
-    "appTitle":"Test App",
-    "buttonLogout":"Logout"
+    "appTitle": "Test App",
+    "buttonLogout": "Logout"
   },
   "Validation": {
     "EmailRequired": "Email is required",
@@ -16,29 +16,29 @@
     "Max15Character": "Maximum 15 characters allowed",
     "PasswordValidation": "Password must contain at least one uppercase, one lowercase, one number and one special character"
   },
-  "Messages":{
-    "loggedInSuccess":"Logged in successfully",
-    "loggedoutSuccess":"Logged out successfully",
-    "unAuthorized":"Unauthorized",
-    "internalError":"Internal server error",
-    "serviceUnavailable":"Service unavailable"
+  "Messages": {
+    "loggedInSuccess": "Logged in successfully",
+    "loggedoutSuccess": "Logged out successfully",
+    "unAuthorized": "Unauthorized",
+    "internalError": "Internal server error",
+    "serviceUnavailable": "Service unavailable"
   },
   "error": {
-    "title":"Not Found | Test App",
+    "title": "Not Found | Test App",
     "heading": "404 Not Found"
   },
-  "login":{
-    "headTitle":"Login | Test App",
-    "cardTitleLogin":"Login",
-    "emailLabel":"Email",
-    "emailPlaceholder":"Enter your email",
-    "passwordLabel":"Password",
-    "passwordPlaceholder":"Enter your password",
-    "submitButton":"Login"
+  "login": {
+    "headTitle": "Login | Test App",
+    "cardTitleLogin": "Login",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "submitButton": "Login"
   },
-  "home":{
-    "title":"Popular Movies | Test App",
-    "popularMovieTitle":"Popular Movies",
-    "buttonLoadMore":"Load More"
+  "home": {
+    "title": "Popular Movies | Test App",
+    "popularMovieTitle": "Popular Movies",
+    "buttonLoadMore": "Load More"
   }
 }
