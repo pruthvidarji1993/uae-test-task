@@ -119,7 +119,11 @@ body {
 .loader {
   height: 100vh;
   width: 100%;
-  background: rgba($primaryBlack, 0.5);
+  background-color: $primaryBlack;
+  background: url("../images/bg-after.png") repeat $primaryBlack;
+  background-size: cover;
+  @include all_center();
+  text-align: center;
 }
 .theme-section {
   background-color: $primaryBlack;
@@ -360,6 +364,8 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  background-color: rgba($cardBg, 0.8) !important;
+  border-color:$cardBg !important;
 }
 
 // RTL CSS

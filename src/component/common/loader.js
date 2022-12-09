@@ -6,7 +6,7 @@ const Loader = () => {
     <section className='loader'>
       <Container fluid='lg'>
         <div className='loader-data'>
-          <Spinner>Loading...</Spinner>
+          <Spinner className='spinner' color='light' />
         </div>
       </Container>
     </section>

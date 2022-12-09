@@ -1,9 +1,9 @@
-// ** Redux Imports
+// Redux Imports
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-// ** Reducers Imports
+// Reducers Imports
 import { login } from './auth/loginReducer';
 
 const persistConfig = {

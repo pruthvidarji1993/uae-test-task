@@ -16,8 +16,9 @@ export default function MoviesList() {
 
   // this useEffect is run on first render and every langauge change
   useEffect(() => {
-    setIsFirstLoading(true);
-    getMovies(1, false);
+      setIsFirstLoading(true);
+      getMovies(1, false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
   /**

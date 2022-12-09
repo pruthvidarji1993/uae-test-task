@@ -2,6 +2,10 @@ import * as Yup from 'yup';
 import i18n from '../i18n/i18n';
 const t = i18n.t;
 
+/**
+ * @name loginSchema
+ * @description validation schema for login page
+ */
 export const loginSchema = Yup.object().shape({
     email: Yup.string()
         .email(t("Validation.ValidEmail"))

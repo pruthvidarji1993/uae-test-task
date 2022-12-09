@@ -4,7 +4,13 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import i18n from '../i18n/i18n';
 
-
+/**
+ * @name api
+ * @description common funcation to handle api requests
+ * @param url API url
+ * @param data JSON data
+ * @param type type of request e.g. 'GET' or 'POST'
+ */
 export const api = async (url, data, type) => {
   let res = null;
 
@@ -54,7 +60,6 @@ export const api = async (url, data, type) => {
         return true;
     }
   } catch (err) {
-    //Remove the user if getting unauthorized or expired token related error
     if (
       err?.response?.status === 401 ||
       err?.response?.status === 403 ||

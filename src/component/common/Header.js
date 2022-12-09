@@ -2,8 +2,10 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Button, Col, Container, Row } from "reactstrap";
-import { handleLogout } from "../../redux/actions/auth/loginActions";
 import LanguagePicker from "./LanguagePicker";
+
+import { handleLogout } from "../../redux/actions/auth/loginActions";
+
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

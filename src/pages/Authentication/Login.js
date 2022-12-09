@@ -1,3 +1,4 @@
+//packages Imports
 import React, { useState } from "react";
 import {
   Button,
@@ -16,25 +17,34 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { Field, Form, Formik } from "formik";
-import { validateEmail } from "../../constants/validationFunctions";
-import { loginSchema } from "../../constants/validations";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
+
+//File Imports
+import { validateEmail } from "../../constants/validationFunctions";
+import { loginSchema } from "../../constants/validations";
 import { login } from "../../redux/actions/auth/loginActions";
 import Infographic from "../../assets/images/login-infographic.svg";
-import { toast } from "react-toastify";
 
 const Login = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  //States
+
   const [visiblePassword, setVisiblePassword] = useState(false);
 
+  /**
+   * @name viewPassword
+   * @description toggle visiblePassword state
+   */
   const viewPassword = () => {
     setVisiblePassword(!visiblePassword);
   };
 
+  /**
+   * @name viewPassword
+   * @description dispatch a action of login
+   */
   const handleSubmit = (value) => {
     dispatch(login(value, navigate));
   };
