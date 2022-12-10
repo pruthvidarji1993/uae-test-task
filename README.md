@@ -14,6 +14,18 @@ Test Demo Created according requirement shared by Client
 - eslintrc.js (Code Standards rules)
 - .env (Secure Configured details)
 
+## Prerequisites 
+* React 17.02
+* NODE
+* axios
+* React Redux (Persistant Redux)
+* react-toastify (Toaster Notification)
+* react-router-dom
+* Bootstrap
+* eslint-plugin-react
+* Formik (Validation)
+* React-i18next (Multi Language)
+
 ## Installation
 
 #### 1. Clone this project or Download that ZIP file
@@ -29,7 +41,7 @@ More details [here](https://nodejs.org/en/download/)
 #### 3. On the command prompt run the following commands
 
 ```sh
-$ cd `project-directory`
+$ cd `uae-test-task`
 ```
 
 ```sh
